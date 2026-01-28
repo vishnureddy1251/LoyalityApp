@@ -128,19 +128,19 @@ public class DiscountService {
         }
     }
 
-    // Bonus: Get all orders
+    // Get all orders
     public List<Discount> getAllOrders() {
         return new ArrayList<>(orders);
     }
 
-    // Bonus: Get orders by status
+    // Get orders by status
     public List<Discount> getOrdersByStatus(String status) {
         return orders.stream()
                 .filter(order -> order.getStatus().equalsIgnoreCase(status))
                 .collect(Collectors.toList());
     }
 
-    // Bonus: Get orders by customer
+    // Get orders by customer
     public List<Discount> getOrdersByCustomer(String customer) {
         return orders.stream()
                 .filter(order -> order.getCustomer().equalsIgnoreCase(customer))

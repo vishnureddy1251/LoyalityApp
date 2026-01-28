@@ -36,19 +36,19 @@ public class DiscountController {
         return ResponseEntity.ok(result);
     }
 
-    // Bonus: GET all orders
+    // GET all orders
     @GetMapping("/all")
     public ResponseEntity<List<Discount>> getAllOrders() {
         return ResponseEntity.ok(orderService.getAllOrders());
     }
 
-    // Bonus: GET orders by status
+    // GET orders by status
     @GetMapping("/status/{status}")
     public ResponseEntity<List<Discount>> getOrdersByStatus(@PathVariable String status) {
         return ResponseEntity.ok(orderService.getOrdersByStatus(status));
     }
 
-    // Bonus: GET orders by customer
+    // GET orders by customer
     @GetMapping("/customer/{customer}")
     public ResponseEntity<List<Discount>> getOrdersByCustomer(@PathVariable String customer) {
         return ResponseEntity.ok(orderService.getOrdersByCustomer(customer));
